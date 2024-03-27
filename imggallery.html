@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link rel="stylesheet" href="imggallery.css">
+  </head>
+  <body>
+    <h1>Image Gallery</h1>
+    <div class="gallery">
+      <a href="art1.jpg" data-lightbox="gallery"><img src="art1.jpg" alt="Image 1"></a>
+      <a href="art3.jpg" data-lightbox="gallery"><img src="art3.jpg" alt="Image 2"></a>
+      <a href="art4.jpg" data-lightbox="gallery"><img src="art4.jpg" alt="Image 3"></a>
+      <a href="wallpapers.jpg" data-lightbox="gallery"><img src="wallpapers.jpg" alt="Image 4"></a>
+      <a href="art2.jpg" data-lightbox="gallery"><img src="art2.jpg" alt="Image 5"></a>
+      <a href="art5.jpg" data-lightbox="gallery"><img src="art5.jpg" alt="Image 6"></a>
+      <!-- Add more images as needed -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Initialize Slick Carousel
+        $(".slider").slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          dots: true,
+        });
+      });
+    </script>
+  </body>
+</html>

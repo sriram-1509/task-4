@@ -1,0 +1,24 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .gallery img {
+    width: 400px;
+    height:auto;
+    margin: 10px;
+    cursor: pointer;
+  }
+  h1{
+    text-align: center;
+    color:rgb(246, 5, 5);
+  }
+  html,body{
+    background-image: url(photo-1507214617719-4a3daf41b9ac.avif);
+    height:auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding:0;
+  }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tab section</title>
+    <link rel="stylesheet" href="tab.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h1>TAB SECTION</h1>
+    <div class="tabs">
+      <ul class="tab-links">
+        <li class="active"><a href="#tab1">Frontend Languages</a></li>
+        <li><a href="#tab2">HTML</a></li>
+        <li><a href="#tab3">CSS</a></li>
+        <li><a href="#tab4">JS</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="tab1" class="tab active">
+          <img src="roadmap.webp" />
+        </div>
+        <div id="tab2" class="tab">
+          <ul>
+            <li>HTML stands for Hyper Text Markup Language</li>
+            <li>HTML is the standard markup language for creating Web pages</li>
+            <li>HTML describes the structure of a Web page</li>
+            <li>HTML consists of a series of elements</li>
+            <li>HTML elements tell the browser how to display the content</li>
+            <li>
+              HTML elements label pieces of content such as "this is a heading",
+              "this is a paragraph", "this is a link", etc.
+            </li>
+          </ul>
+        </div>
+        <div id="tab3" class="tab">
+          <ul>
+            <li>CSS is the language we use to style an HTML document.</li>
+            <li>CSS describes how HTML elements should be displayed.</li>
+            <li>This tutorial will teach you CSS from basic to advanced.</li>
+          </ul>
+        </div>
+        <div id="tab4" class="tab">
+          <ul>
+            <li>
+              JavaScript is the world's most popular programming language.
+            </li>
+            <li>JavaScript is the programming language of the Web.</li>
+            <li>JavaScript is easy to learn.</li>
+            <li>
+              This tutorial will teach you JavaScript from basic to advanced
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        // Hide all tab contents except the first one
+        $(".tab-content .tab").not(":first").hide();
+        // Handle tab click event
+        $(".tab-links a").on("click", function (e) {
+          var currentAttrValue = $(this).attr("href");
+          // Show/Hide Tabs
+          $(".tab-content " + currentAttrValue)
+            .show()
+            .siblings()
+            .hide();
+          // Change/remove current tab to active
+          $(this)
+            .parent("li")
+            .addClass("active")
+            .siblings()
+            .removeClass("active");
+
+          e.preventDefault();
+        });
+      });
+    </script>
+  </body>
+</html>

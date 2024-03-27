@@ -1,0 +1,64 @@
+.accordion {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+.accordion-title {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #4a4a4a;
+  color: #fff;
+  cursor: pointer;
+}
+.accordion-title h3 {
+  flex: 1;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+}
+.accordion-title i {
+  width: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.accordion-content {
+  padding: 10px 15px;
+  display: none;
+  background-color: #6fb79c;
+}
+.accordion-content p {
+  margin: 0;
+  color: black;
+}
+.accordion-item:last-child .accordion-content {
+  border-bottom: none;
+}
+.accordion-item.active .accordion-content {
+  display: block;
+}
+.accordion-item.active .accordion-title i {
+  transform: rotate(180deg);
+}
+h1 {
+  text-align: center;
+}
+.accordion-title:hover {
+  background-color: peru;
+}
+.accordion-title:active {
+  background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+}
+body {
+  background-image: linear-gradient(
+    to right,
+    #eea2a2 0%,
+    #bbc1bf 19%,
+    #57c6e1 42%,
+    #b49fda 79%,
+    #7ac5d8 100%
+  );
+}
